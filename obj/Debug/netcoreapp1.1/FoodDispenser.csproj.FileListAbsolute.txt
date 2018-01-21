@@ -1,0 +1,9 @@
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\bin\Debug\netcoreapp1.1\FoodDispenser.deps.json
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\bin\Debug\netcoreapp1.1\FoodDispenser.runtimeconfig.json
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\bin\Debug\netcoreapp1.1\FoodDispenser.runtimeconfig.dev.json
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\bin\Debug\netcoreapp1.1\FoodDispenser.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\bin\Debug\netcoreapp1.1\FoodDispenser.pdb
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\obj\Debug\netcoreapp1.1\FoodDispenser.csprojResolveAssemblyReference.cache
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\obj\Debug\netcoreapp1.1\FoodDispenser.AssemblyInfo.cs
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\obj\Debug\netcoreapp1.1\FoodDispenser.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\FoodDispenser\FoodDispenser\obj\Debug\netcoreapp1.1\FoodDispenser.pdb
