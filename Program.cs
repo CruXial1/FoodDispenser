@@ -16,16 +16,21 @@ namespace FoodDispenser
 
         public static void Main(string[] args)
         {
-            
+            //Set title
+            Console.Title = "CruXial's Food Dispenser";
 
         //Greet the user
         Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Hey! And welcome to CruXial's 'Food Dispenser'");
             Console.WriteLine("Press <ENTER> to continue!\n\n");
 
-            if (Console.ReadKey().Key != ConsoleKey.Enter)
+            var checkKey = Console.ReadKey();
+
+            if (checkKey.Key != ConsoleKey.Enter)
             {
-                Console.WriteLine("\n");
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                Console.WriteLine($"\nI told you to press <ENTER> not '{checkKey.Key}'");
 
                 return;
             }
@@ -33,7 +38,7 @@ namespace FoodDispenser
             Console.ForegroundColor = ConsoleColor.DarkCyan;
 
             //Inform the user
-            Console.WriteLine("Available commands:\n!balance\n!stop");
+            Console.WriteLine("Available commands:\n!balance\n!stop\n!addmoney\n!menu\n!cart\n!checkout\n!buy");
 
             var Balance = 0;
 
@@ -137,13 +142,13 @@ namespace FoodDispenser
 
                 if(readLine.ToLower() == "!cart")
                 {
-                    if(cartPrices.Count == 0)
+                    if (cartPrices.Count == 0)
                     {
                         Console.WriteLine("\nYour cart is empty.");
                     }
                     else
                     {
-                        Console.WriteLine(String.Join("\n Total Price: $", cartPrices.Select(x => x.ToString())));
+                        Console.WriteLine($"\n Total Price: {cartPrices.Sum():c}");
                     }
                 }
 
@@ -156,11 +161,33 @@ namespace FoodDispenser
                         cartPrices.Add(0.0);
                     }
 
-                    Console.WriteLine($"Total Price: $", cartPrices.Select(x => x.ToString()));
+                    Console.WriteLine($"\n Total Price: {cartPrices.Sum():c}");
+
+                    if(Balance < cartPrices.Sum())
+                    {
+                        Console.WriteLine($"You only have ${Balance}, however you need {cartPrices.Sum():c} to check out.");
+                    }
+
+                    if (Balance > cartPrices.Sum())
+                    {
+                        Console.WriteLine("Thanks for your purchase, Hope I'll see you again soon!");
+                    }
                 }
 
-                //avoid errors
-                cartPrices.Sum();
+                if(readLine.ToLower() == "!buy")
+                {
+                    Console.WriteLine("\nMenu:\nCoke\nMtnDew\n\nType the name of the product you want to buy!");
+
+                    if(readLine.ToLower() == "coke")
+                    {
+                        Coke();
+                    }
+
+                    if (readLine.ToLower() == "mtndew")
+                    {
+                        MtnDew();
+                    }
+                }
             } 
             //end of loop
         }
